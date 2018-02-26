@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Classifier Tranning Data API</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h1>Classifier Tranning Data API</h1>
+                    <p class="lead">For Full Documentation , Click
+                        <a href="./apidoc">here</a>
+                    </p>
+                    <p class="lead"> To upload more CSV data (hid,chunk,has_space) use CSV Upload Utility</p>
+                </div>
+                <div class="col-sm-12 text-center">
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#csvUploadUtility">Open CSV Upload Utility</button>
+                </div>
+
+                <div class="col-sm-12">
+                    <hr>
+                    <p class="lead">API Rate Limit Setting is set to 35 request per 60 Seconds.
+                    </p>
+                    <div class="my-3 p-3 bg-white rounded box-shadow">
+                        <h6 class="border-bottom border-gray pb-2 mb-0">Public Available Endpoints</h6>
+                        <div class="media text-muted border-bottom border-gray mt-1 pt-3">
+                            <span class="d-inline p-2 bg-primary text-white">POST</span>
+                            <p class="media-body ml-2 mt-2">
+                                <a href="./apidoc/#api-Create_New_Chunk-PostV1JsonClassifierCreate">/v1/json/classifier/create</a>
+                            </p>
+                            <hr>
+                        </div>
+                        <div class="media text-muted border-bottom border-gray mt-1 pt-3">
+                            <span class="d-inline p-2 bg-success text-white">GET</span>
+                            <p class="media-body ml-2 mt-2">
+                                <a href="./apidoc/#api-List_All_Data-GetV1JsonClassifierAll">/v1/json/classifier/all</a>
+                            </p>
+                            <hr>
+                        </div>
+                        <div class="media text-muted border-bottom border-gray mt-1 pt-3">
+                            <span class="d-inline p-2 bg-primary text-white">POST</span>
+                            <p class="media-body ml-2 mt-2">
+                                <a href="./apidoc/#api-List_All_Data-PostV1JsonClassifierAll">/v1/json/classifier/all</a>
+                            </p>
+                            <hr>
+                        </div>
+
+                        <div class="media text-muted border-bottom border-gray mt-1 pt-3">
+                            <span class="d-inline p-2 bg-success text-white">GET</span>
+                            <p class="media-body ml-2 mt-2">
+                                <a href="./apidoc/#api-Operations_using_HID-GetV1JsonClassifierHidChunkhid">/v1/json/classifier/hid/:chunkHid</a>
+                            </p>
+                            <hr>
+                        </div>
+                        <div class="media text-muted border-bottom border-gray mt-1 pt-3">
+                            <span class="d-inline p-2 bg-primary text-white">POST</span>
+                            <p class="media-body ml-2 mt-2">
+                                <a href="./apidoc/#api-Operations_using_HID-PostV1JsonClassifierHid">/v1/json/classifier/hid</a>
+                            </p>
+                            <hr>
+                        </div>
+                        <div class="media text-muted border-bottom border-gray mt-1 pt-3">
+                            <span class="d-inline p-2 bg-warning text-white">PUT</span>
+                            <p class="media-body ml-2 mt-2">
+                                <a href="./apidoc/#api-Operations_using_HID-PutV1JsonClassifierHidChunkhid">/v1/json/classifier/hid/:chunkHid</a>
+                            </p>
+                            <hr>
+                        </div>
+                        <div class="media text-muted border-bottom border-gray mt-1 pt-3">
+                            <span class="d-inline p-2 bg-danger text-white">Delete</span>
+                            <p class="media-body ml-2 mt-2">
+                                <a href="./apidoc/#api-Operations_using_HID-DeleteV1JsonClassifierHidChunkhid">/v1/json/classifier/hid/:chunkHid</a>
+                            </p>
+                            <hr>
+                        </div>
+
+                        <div class="media text-muted border-bottom border-gray mt-1 pt-3">
+                            <span class="d-inline p-2 bg-success text-white">GET</span>
+                            <p class="media-body ml-2 mt-2">
+                                <a href="./apidoc/#api-Operations_using_ID-GetV1JsonClassifierIdChunkid">/v1/json/classifier/id/:chunkId</a>
+                            </p>
+                            <hr>
+                        </div>
+                        <div class="media text-muted border-bottom border-gray mt-1 pt-3">
+                            <span class="d-inline p-2 bg-primary text-white">POST</span>
+                            <p class="media-body ml-2 mt-2">
+                                <a href="./apidoc/#api-Operations_using_ID-PostV1JsonClassifierId">/v1/json/classifier/id</a>
+                            </p>
+                            <hr>
+                        </div>
+                        <div class="media text-muted border-bottom border-gray mt-1 pt-3">
+                            <span class="d-inline p-2 bg-warning text-white">PUT</span>
+                            <p class="media-body ml-2 mt-2">
+                                <a href="./apidoc/#api-Operations_using_ID-PutV1JsonClassifierIdChunkid">/v1/json/classifier/id/:chunkId</a>
+                            </p>
+                            <hr>
+                        </div>
+                        <div class="media text-muted border-bottom border-gray mt-1 pt-3">
+                            <span class="d-inline p-2 bg-danger text-white">Delete</span>
+                            <p class="media-body ml-2 mt-2">
+                                <a href="./apidoc/#api-Operations_using_ID-DeleteV1JsonClassifierIdChunkid">/v1/json/classifier/id/:chunkId</a>
+                            </p>
+                            <hr>
+                        </div>
+
+                        <small class="d-block text-right mt-3">
+                            <a href="#">Version 1.0.0</a>
+                        </small>
+                    </div>
+
+                    <p class="lead">&copy; Created With Node Express JS
+                    </p>
+                    <p class="lead pull-right">Fork SourceCode
+                        <a target="_blank" href="https://github.com/riddhishikha15/rds-training-api">
+                            <i class="fa fa-github"></i> @Github</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="csvUploadUtility" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Upload Classifier Data in CSV </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="content">
+                    <p class="text-center">Use the form below to upload a list of tranning Data.
+                        <br>Click
+                        <a href="/template">here</a> for an example template.</p>
+                    <form class="form-horizontal" id="uploadCSVform" action="javascript:void(0)" method="POST" encType="multipart/form-data">
+                        <input type="file" name="file" id="csvfile" accept="*.csv" />
+                        <br/>
+                        <br/>
+                        <button class="btn btn-md btn-primary" type="submit" id="uploadbtn">Upload CSV Data</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("#uploadCSVform").submit(function (e) {
+                $("#uploadbtn").replaceWith("<button id=\"uploading\" class=\"btn btn-danger\"><i class=\"fa fa-spinner fa-pulse\"></i> Uploading</button>");
+                $.ajax({
+                    type: "POST",
+                    url: "/",
+                    data: new FormData(this),
+                    processData: false,
+                    contentType: false,
+                    success: function (html, status) {
+                        if (html.success == "ok") {
+                            $("#uploading").replaceWith("<button type=\"submit\" id=\"uploadbtn\" class=\"btn btn-primary btn-md\">Upload CSV Data </button>")
+                            alert("Success! \n\n" + html.response);
+                            console.log(status + " : " + html.response)
+                        }
+                        else {
+                            $("#uploading").replaceWith("<button type=\"submit\" id=\"uploadbtn\" class=\"btn btn-primary btn-md\">Upload CSV Data </button>")
+                            alert(html.response);
+                        }
+                    },
+                    error: function (data) {
+                        $("#uploading").replaceWith("<button type=\"submit\" id=\"uploadbtn\" class=\"btn btn-primary btn-md\">Upload CSV Data </button>")
+                        alert("Error " + data.status + " : " + data.responseText);
+                        console.log(data.status + " " + data.statusText)
+                    },
+                });
+                e.preventDefault();
+            });
+        });
+    </script>
+</body>
+
+</html>

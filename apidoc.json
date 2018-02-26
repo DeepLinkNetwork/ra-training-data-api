@@ -1,0 +1,11 @@
+{
+	"name": "RDS-TRAINING-DATA chunk API documentation",
+	"version": "1.0.0",
+	"description": "API for rds-training-Data list manager",
+	"title": "RDS Training API",
+	"url": "https://rds-training-api.appspot.com",
+	"sampleUrl": "https://rds-training-api.appspot.com",
+	"template": {
+		"forceLanguage": "en"
+	}
+}
