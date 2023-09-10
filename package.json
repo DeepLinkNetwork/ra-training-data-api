@@ -18,14 +18,14 @@
 	"homepage": "https://github.com/riddhishikha15/tranning-csv-upload#readme",
 	"dependencies": {
 		"body-parser": "^1.18.2",
-		"csv": "^2.0.0",
+		"csv": "^6.3.3",
 		"express": "^4.16.2",
 		"express-fileupload": "^0.4.0",
 		"express-rate-limit": "^2.11.0",
 		"fast-csv": "^2.4.0",
 		"json2csv": "^3.11.1",
 		"mongodb": "^3.0.3",
-		"mongoose": "^5.0.7"
+		"mongoose": "^5.13.20"
 	},
 	"devDependencies": {
 		"nodemon": "^1.15.1"
